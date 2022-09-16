@@ -2720,7 +2720,7 @@ spec:
     - jsonPath: .metadata.creationTimestamp
       name: Age
       type: date
-    name: v1beta2
+    name: v1beta1
     schema:
       openAPIV3Schema:
         description: Kustomization is the Schema for the kustomizations API.
@@ -3109,7 +3109,7 @@ spec:
                   Defaults to 'Interval' duration.
                 type: string
               validation:
-                description: 'Deprecated: Not used in v1beta2.'
+                description: 'Deprecated: Not used in v1beta1.'
                 enum:
                 - none
                 - client

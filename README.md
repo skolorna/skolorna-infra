@@ -167,7 +167,7 @@ Infrastructure:
 In **infrastructure/sources/** dir we have the Helm repositories definitions:
 
 ```yaml
-apiVersion: source.toolkit.fluxcd.io/v1beta2
+apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
   name: podinfo
@@ -175,7 +175,7 @@ spec:
   interval: 5m
   url: https://stefanprodan.github.io/podinfo
 ---
-apiVersion: source.toolkit.fluxcd.io/v1beta2
+apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
   name: bitnami
@@ -204,7 +204,7 @@ The clusters dir contains the Flux configuration:
 In **clusters/staging/** dir we have the Kustomization definitions:
 
 ```yaml
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
   name: apps
@@ -220,7 +220,7 @@ spec:
   prune: true
   wait: true
 ---
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
   name: infrastructure
@@ -371,7 +371,7 @@ resources:
 Enable decryption on your clusters by editing the `infrastructure.yaml` files:
 
 ```yaml
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
   name: infrastructure
